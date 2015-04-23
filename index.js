@@ -16,18 +16,18 @@ let argv = require('yargs')
   .describe('host', 'Proxy to a remote machine')
   .describe('port', 'Remote machine port')
   .describe('url', 'Remote machine URL')
-  .describe('logfile', 'Name of logfile to write logs to')
+  .describe('log', 'Name of logfile to write logs to')
   .usage('Usage: bode $0 <command> [options]')
   .example('bode $0 --host www.google.com')
   .example('bode $0 --url http://google.com')
-  .example('bode $0 --logfile /tmp/proxy.log')
+  .example('bode $0 --log /tmp/proxy.log')
   .epilog('Thanks to CodePath and @WalmartLabs for Node.JS!')
   .argv
 
 let scheme = 'http://'
 let port = argv.port || argv.host === '127.0.0.1' ? 8000 : 80
 let destinationUrl = argv.url || scheme + argv.host + ':' + port
-let logStream = argv.logfile ? fs.createWriteStream(argv.logfile) : process.stdout
+let logStream = argv.log ? fs.createWriteStream(argv.log) : process.stdout
 
 http.createServer((req, res) => {
   logStream.write(responseCli('\nEcho request: \n' + JSON.stringify(req.headers)))
