@@ -33,5 +33,10 @@ Thanks to CodePath and @WalmartLabs for Node.JS!
 - [x] Does your app log request to stdout or save it properly to a file when the log argument is given?
 - [x] Did you successfully push your code to github? Can you see the code on github?
 
+![codepath_tasks.gif](https://cloud.githubusercontent.com/assets/10262447/7308305/259f12e0-e9c8-11e4-8267-2c179e78d2fa.gif)
 
-![codepath_tasks](https://cloud.githubusercontent.com/assets/10262447/7308305/259f12e0-e9c8-11e4-8267-2c179e78d2fa.gif)
+Optional Features:
+- [x] Documentation, -h
+- [x] Tweak the log styling, play with colors, spacing and additional data
+
+![help.gif](https://cloud.githubusercontent.com/assets/10262447/7308452/61d995ae-e9c9-11e4-9c1e-8dc951ce44ff.gif)
