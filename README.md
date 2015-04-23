@@ -1,7 +1,7 @@
 # node-proxy-server
 A proxy server developed using Node.JS
 
-###Overview:
+####Overview:
 The proxy server will open up 2 ports on your machine: port 8000 and port 8001.
 
 `Port 8000:` Echo Server on this port will simple echo our requests back to caller
@@ -25,3 +25,10 @@ Examples:
 
 Thanks to CodePath and @WalmartLabs for Node.JS!
 ```
+
+####Codepath Task List:
+- [x] Can you successfully echo requests made to the echo server?1
+- [x] Can you successfully proxy requests made to the proxy server?
+- [x] Did you include a CLI as described above?
+- [x] Does your app log request to stdout or save it properly to a file when the log argument is given?
+- [x] Did you successfully push your code to github? Can you see the code on github?
