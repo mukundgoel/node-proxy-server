@@ -16,12 +16,12 @@ Options:
   --host      Proxy to a remote machine                   [default: "127.0.0.1"]
   --port      Remote machine port                                               
   --url       Remote machine URL                                                
-  --logfile   Name of logfile to write logs to                                  
+  --log   Name of logfile to write logs to                                  
 
 Examples:
   bode index.js --host www.google.com                                           
   bode index.js --url http://google.com                                         
-  bode index.js --logfile /tmp/proxy.log                                        
+  bode index.js --log /tmp/proxy.log                                        
 
 Thanks to CodePath and @WalmartLabs for Node.JS!
 ```
@@ -33,7 +33,7 @@ Thanks to CodePath and @WalmartLabs for Node.JS!
 - [x] Does your app log request to stdout or save it properly to a file when the log argument is given?
 - [x] Did you successfully push your code to github? Can you see the code on github?
 
-![codepath_tasks.gif](https://cloud.githubusercontent.com/assets/10262447/7308305/259f12e0-e9c8-11e4-8267-2c179e78d2fa.gif)
+![codepath_new.gif](https://cloud.githubusercontent.com/assets/10262447/7308601/bfdc52e4-e9ca-11e4-99f2-863856531d07.gif)
 
 Optional Features:
 - [x] Documentation, -h
