@@ -32,6 +32,9 @@ Thanks to CodePath and @WalmartLabs for Node.JS!
 ![task1](https://cloud.githubusercontent.com/assets/10262447/7303802/ea109ba6-e9a7-11e4-88fe-362346a2744e.gif)
 
 - [x] Can you successfully proxy requests made to the proxy server?
+
+![task2](https://cloud.githubusercontent.com/assets/10262447/7308207/50a69680-e9c7-11e4-8b30-9f5fcc265b8f.gif)
+
 - [x] Did you include a CLI as described above?
 - [x] Does your app log request to stdout or save it properly to a file when the log argument is given?
 - [x] Did you successfully push your code to github? Can you see the code on github?
