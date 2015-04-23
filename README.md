@@ -29,8 +29,7 @@ Thanks to CodePath and @WalmartLabs for Node.JS!
 ####Codepath Task List:
 - [x] Can you successfully echo requests made to the echo server?
 
-
-
+![task1](https://cloud.githubusercontent.com/assets/10262447/7303802/ea109ba6-e9a7-11e4-88fe-362346a2744e.gif)
 
 - [x] Can you successfully proxy requests made to the proxy server?
 - [x] Did you include a CLI as described above?
