@@ -34,6 +34,7 @@ Thanks to CodePath and @WalmartLabs for Node.JS!
 - [x] Did you successfully push your code to github? Can you see the code on github?
 
 ![codepath_new.gif](https://cloud.githubusercontent.com/assets/10262447/7308601/bfdc52e4-e9ca-11e4-99f2-863856531d07.gif)
+note: dev.walmart.com is the same as localhost(127.0.0.1) since calling 127.0.0.1 directly is somehow blocked
 
 Optional Features:
 - [x] Documentation, -h
