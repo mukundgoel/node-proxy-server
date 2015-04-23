@@ -3,16 +3,24 @@ let fs = require('fs')
 let request = require('request')
 let through = require('through')
 
+let clc = require('cli-color');
+  let error = clc.red.bold;
+  let responseCli = clc.green.bold;
+  let proxyCli = clc.green.bold;
+  let notice = clc.blue.bold;
+
 let argv = require('yargs')
   .default('host', '127.0.0.1')
   .help('h')
   .alias('h', 'help')
   .describe('host', 'Proxy to a remote machine')
   .describe('port', 'Remote machine port')
-  .describe('logfile', "Name of logfile to write logs to")
+  .describe('url', 'Remote machine URL')
+  .describe('logfile', 'Name of logfile to write logs to')
   .usage('Usage: bode $0 <command> [options]')
-  .example('bode $0 --host www.google.com', 'Proxy all requests to www.google.com')
-  .example('bode $0 --logfile /tmp/proxy.log', 'Write all logs to /tmp/proxy.log (instead of terminal)')
+  .example('bode $0 --host www.google.com')
+  .example('bode $0 --url http://google.com')
+  .example('bode $0 --logfile /tmp/proxy.log')
   .epilog('Thanks to CodePath and @WalmartLabs for Node.JS!')
   .argv
 
@@ -22,7 +30,7 @@ let destinationUrl = argv.url || scheme + argv.host + ':' + port
 let logStream = argv.logfile ? fs.createWriteStream(argv.logfile) : process.stdout
 
 http.createServer((req, res) => {
-  logStream.write('\nEcho request: \n' + JSON.stringify(req.headers))
+  logStream.write(responseCli('\nEcho request: \n' + JSON.stringify(req.headers)))
   for (let header in req.headers) {
     res.setHeader(header, req.headers[header])
   }
@@ -30,7 +38,7 @@ http.createServer((req, res) => {
   req.pipe(res)
 }).listen(8000)
 
-logStream.write('Listening at http://127.0.0.1:8000')
+logStream.write(notice('Listening at http://127.0.0.1:8000'))
 
 http.createServer((req, res) => {
   let url = destinationUrl
@@ -42,7 +50,7 @@ http.createServer((req, res) => {
     url: url + req.url
   }
 
-  logStream.write('\nProxy Request: \n' + JSON.stringify(req.headers))
+  logStream.write(responseCli('\nProxy Request: \n' + JSON.stringify(req.headers)))
   through(req, logStream, {autoDestroy: false})
 
   let destinationResponse = req.pipe(request(options))
