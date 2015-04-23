@@ -16,12 +16,12 @@ Options:
   --host      Proxy to a remote machine                   [default: "127.0.0.1"]
   --port      Remote machine port                                               
   --url       Remote machine URL                                                
-  --log   Name of logfile to write logs to                                  
+  --log       Name of logfile to write logs to                                  
 
 Examples:
   bode index.js --host www.google.com                                           
   bode index.js --url http://google.com                                         
-  bode index.js --log /tmp/proxy.log                                        
+  bode index.js --log /tmp/proxy.log                                            
 
 Thanks to CodePath and @WalmartLabs for Node.JS!
 ```
