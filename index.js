@@ -2,9 +2,20 @@ let http = require('http')
 let fs = require('fs')
 let request = require('request')
 let through = require('through')
+
 let argv = require('yargs')
   .default('host', '127.0.0.1')
+  .help('h')
+  .alias('h', 'help')
+  .describe('host', 'Proxy to a remote machine')
+  .describe('port', 'Remote machine port')
+  .describe('logfile', "Name of logfile to write logs to")
+  .usage('Usage: bode $0 <command> [options]')
+  .example('bode $0 --host www.google.com', 'Proxy all requests to www.google.com')
+  .example('bode $0 --logfile /tmp/proxy.log', 'Write all logs to /tmp/proxy.log (instead of terminal)')
+  .epilog('Thanks to CodePath and @WalmartLabs for Node.JS!')
   .argv
+
 let scheme = 'http://'
 let port = argv.port || argv.host === '127.0.0.1' ? 8000 : 80
 let destinationUrl = argv.url || scheme + argv.host + ':' + port
